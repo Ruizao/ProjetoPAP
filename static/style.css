@@ -1,0 +1,282 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("/static/back/wall2.jpg");
+    background-repeat: repeat;
+    background-size: 1920px 1090px;
+
+}
+
+input, textarea {
+    padding: 5px 15px;
+}
+
+input[type=text], input[type=password] {
+    width: 256px;
+}
+
+moeda {
+    display: block;
+    color: #1C1;
+    font-weight: bold;
+}
+
+shop {
+    display: block;
+    font-size: lem;
+    color: #C11;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+fieldset {
+    width: 256px;
+    padding: 50px;
+    background-color: lightgray;
+    border: 2px groove;
+}
+
+
+table, td {
+    background-color: #635f5f;
+    border: 30px solid #635f5f;
+    box-shadow: 0 0 100px #fff;
+    border-collapse: collapse;
+}
+
+td {
+    border-radius: 70px;
+    height: 30px;
+    font-weight: bold;
+    background-color: white;
+    text-align: center;
+    padding: 30px 10px;
+    width: 256px;
+    vertical-align: bottom;
+}
+
+
+.navbar {
+    width: 58.9%;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 100%;
+    overflow: auto;
+    border-radius: 25px;
+    float: center;
+}
+
+.navbar a {
+    float: left;
+    padding: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar usr {
+    float: right;
+    padding: 16px;
+    background-color: #fff;
+    color: black
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    border-radius: 13px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+
+
+}
+
+.active {
+    background-color: #black;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+    }
+}
+
+
+/* HOMEM */
+
+.main2 {
+    display: inline-block;
+    text-align: left;
+    margin: 20px;
+    padding: 35px;
+
+}
+
+.main2 input, button {
+    display: inline-block;
+    border-radius: 25px;
+    border: full;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 50px;
+    font-family: sans;
+    color: black;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+.main2 button {
+    display: inline-block;
+    background-size: 300px 300px;
+    width: 300px;
+    height: 300px;
+    padding-left: 0;
+    border-radius: 25px;
+    background-image: url("/static/back/homem.jpg");
+    background-color: rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+    font-weight: bold;
+
+}
+
+.main2 button:hover {
+    box-shadow: 2px 2px 5px #fff;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.main2 input:hover {
+    box-shadow: 2px 2px 5px #fff;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+
+.col1 {
+    color: #fff;
+}
+
+
+/* MULHER */
+
+
+.main3 {
+    display: inline-block;
+    text-align: right;
+    margin: 20px;
+    padding: 35px;
+
+}
+
+.main3 input, button {
+    display: inline-block;
+    border-radius: 25px;
+    border: full;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 50px;
+    font-family: sans-serif;
+    color: black;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+.main3 button {
+    display: inline-block;
+    background-size: 300px 300px;
+    width: 300px;
+    height: 300px;
+    padding-left: 0;
+    border-radius: 25px;
+    background-image: url("/static/back/mulher.jpg");
+    background-color: rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+    font-weight: bold;
+
+}
+
+.main3 button:hover {
+    box-shadow: 2px 2px 5px #fff;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.main3 input:hover {
+    box-shadow: 2px 2px 5px #fff;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+
+.col2 {
+    color: #fff;
+}
+
+
+/* NOVA TECNOLOGIA */
+
+
+.main4 {
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+    padding: 35px;
+
+}
+
+.main4 input, button {
+    display: inline-block;
+    border-radius: 25px;
+    border: full;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 38px;
+    font-family: sans;
+    color: black;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+
+}
+
+.main4 button {
+    display: inline-block;
+    background-size: 300px 300px;
+    width: 300px;
+    height: 300px;
+    padding-left: 0;
+    border-radius: 25px;
+    background-image: url("/static/back/smart.jpg");
+    background-color: rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+    font-weight: bold;
+
+}
+
+.main4 button:hover {
+    box-shadow: 2px 2px 5px #fff;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.main4 input:hover {
+    box-shadow: 2px 2px 5px #fff;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+
+.col3 {
+    color: #fff;
+}
+
+
+.body4 {
+    background-image: url("/static/back/login2.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: -13px;
+    background-size: 155%;
+    background-attachment: fixed;
+}
+

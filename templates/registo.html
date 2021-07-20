@@ -1,0 +1,124 @@
+{% extends 'layout.html' %}
+{% block titulo %}
+<div class="body5">
+    <title>Registo</title>
+
+    <style>
+
+        .body5 {
+            margin: 0;
+            padding: 0;
+            background-size: 1920px 1080px;
+            background-image: url("/static/back/rolex2.gif");
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+
+        .container {
+            width: 385px;
+            height: 650px;
+            margin: 7% auto;
+            border-radius: 25px;
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 17px #fff;
+        }
+
+        .header {
+            text-align: center;
+            padding-top: 49px;
+
+        }
+
+        .header h1 {
+            color: #fff;
+            font-size: 45px;
+            margin-bottom: 80px;
+        }
+
+        .main1 {
+            text-align: center;
+        }
+
+        .main1 input, button {
+            width: 270px;
+            height: 45px;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            padding-left: 38px;
+            box-sizing: border-box;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .main1 button {
+            padding-left: 0;
+            border-radius: 25px;
+            background-color: rgba(0, 0, 0, 0.8);
+            letter-spacing: 1px;
+            font-weight: bold;
+            margin-bottom: 70px;
+        }
+
+        .main1 button:hover {
+            box-shadow: 2px 2px 5px #fff;
+            border-radius: 25px;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .main1 input:hover {
+            color: white;
+            box-shadow: 2px 2px 5px #fff;
+            border-radius: 25px;
+            background-color: rgba(0, 0, 0, 0.35);
+        }
+
+        .main1 span {
+            position: relative;
+            color: white;
+
+        }
+
+        .main1 i {
+            position: absolute;
+            left: 15px;
+            color: #fff;
+            font-size: 16px;
+            top: 2px;
+        }
+
+        .col {
+            color: #fff;
+        }
+    </style>
+    {% endblock %}
+    {% block conteudo %}
+
+    <div class="container">
+        <div class="header">
+            <h1>Registo</h1>
+        </div>
+        <div class="main1">
+            <form method="post">
+ 			<span>
+ 				<input type="text" placeholder="Username" name="utilizador" required>
+ 			</span>
+                <span>
+                 <input type="text" placeholder="Email" name="email" required>
+            </span>
+                <span>
+ 				<input type="password" placeholder="Password" name="passe" required>
+ 			</span>
+                <span>
+                <input type="password" placeholder="Repeat Password" name="cpasse" required>
+            </span>
+                {% if erro %}<h4>{{ erro }}</h4>{% endif %}
+                <br>
+                <br>
+                <button class="col">Registo</button>
+            </form>
+        </div>
+    </div>
+    {% endblock %}
+</div>
