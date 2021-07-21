@@ -1,117 +1,116 @@
 {% extends 'layout.html' %}
 {% block titulo %}
 <title>Login</title>
-<div class="body4">
-    <style>
-        .body4 {
-            margin: 0;
-            padding: 0;
-            ackground-size: 1920px 1080px;
-            background-image: url("/static/back/login2.gif");
-            background-repeat: no-repeat;
-            background-position: center;
-        }
+{% endblock %}
 
-        .container {
-            font-family: serif;
-            width: 385px;
-            height: 635px;
-            margin: 7% auto;
-            border-radius: 25px;
-            background-color: rgba(0, 0, 0, 0.8);
-            box-shadow: 0 0 17px #fff;
-        }
+{% block conteudo %}
 
-        .header {
-            text-align: center;
-            padding-top: 49px;
+<style>
+    body {
+        background-image: url("/static/back/login2.gif");
+        background-size: 1920px 1080px;
+        font-family: sans-serif;
+        color: black;
+    }
 
-        }
+    .container {
+        font-family: serif;
+        width: 385px;
+        height: 550px;
+        margin: 7% auto;
+        border-radius: 25px;
+        background-color: rgba(0, 0, 0, 0.8);
+        box-shadow: 0 0 17px #fff;
+    }
 
-        .header h1 {
-            color: #fff;
-            font-size: 45px;
-            margin-bottom: 80px;
-        }
+    .header {
+        text-align: center;
+        padding-top: 49px;
 
-        .main {
-            text-align: center;
+    }
 
-        }
+    .header h1 {
+        color: #fff;
+        font-size: 45px;
+        margin-bottom: 80px;
+    }
 
-        .main input, button {
-            width: 270px;
-            height: 45px;
-            border-radius: 25px;
-            border: none;
-            outline: none;
-            padding-left: 38px;
-            box-sizing: border-box;
-            font-size: 15px;
-            margin-bottom: 20px;
-        }
+    .main {
+        text-align: center;
 
-        .main button {
-            padding-left: 0;
-            border-radius: 25px;
-            background-color: rgba(0, 0, 0, 0.8);
-            letter-spacing: 1px;
-            font-weight: bold;
-            margin-bottom: 70px;
-        }
+    }
 
-        .main button:hover {
-            box-shadow: 2px 2px 5px #fff;
-            border-radius: 25px;
-            background-color: rgba(0, 0, 0, 0.1);
-        }
+    .main input, button {
+        width: 270px;
+        height: 45px;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+        padding-left: 38px;
+        box-sizing: border-box;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
 
-        .main input:hover {
-            color: white;
-            box-shadow: 2px 2px 5px #fff;
-            border-radius: 25px;
-            background-color: rgba(0, 0, 0, 0.35);
-        }
+    .main button {
+        padding-left: 0;
+        border-radius: 25px;
+        background-color: rgba(0, 0, 0, 0.8);
+        letter-spacing: 1px;
+        font-weight: bold;
+        margin-bottom: 70px;
+    }
 
-        .main span {
-            color: white;
-            position: relative;
-        }
+    .main button:hover {
+        box-shadow: 2px 2px 5px #fff;
+        border-radius: 25px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 
-        .main i {
-            position: absolute;
-            left: 15px;
-            color: #fff;
-            font-size: 16px;
-            top: 2px;
-        }
+    .main input:hover {
+        color: white;
+        box-shadow: 2px 2px 5px #fff;
+        border-radius: 25px;
+        background-color: rgba(0, 0, 0, 0.35);
+    }
 
-        .col {
-            color: #fff;
-        }
-    </style>
-    {% endblock %}
-    {% block conteudo %}
+    .main span {
+        color: white;
+        position: relative;
+    }
 
-    <div class="container">
-        <div class="header">
-            <h1>Login</h1>
-        </div>
-        <div class="main">
-            <form method="post">
+    .main i {
+        position: absolute;
+        left: 15px;
+        color: #fff;
+        font-size: 16px;
+        top: 2px;
+    }
+
+    .col {
+        color: #fff;
+    }
+</style>
+
+
+<div class="container">
+    <div class="header">
+        <h1>Login</h1>
+    </div>
+    <div class="main">
+        <form method="post">
  			<span>
  				<div class="col1"><input type="text" placeholder="Username" name="utilizador" required></div>
  			</span>
-                <span>
+            <span>
  				<input type="password" placeholder="Password" name="passe" required>
  			</span><br>
-                <br>
-                {% if erro %}<h4>{{ erro }}</h4>{% endif %}
-                <br>
-                <br>
-                <button class="col">Log In</button>
-            </form>
-        </div>
+            <br>
+            {% if erro %}<h4>{{ erro }}</h4>{% endif %}
+            <br>
+            <button class="col">Log In</button>
+        </form>
     </div>
-    {% endblock %}
+</div>
+{% endblock %}
 </div>

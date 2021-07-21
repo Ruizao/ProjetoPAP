@@ -5,7 +5,86 @@
 
 {% block conteudo %}
 <center>
+
     <h1>Lista de Compras</h1>
+
+
+    <style>
+
+        body {
+            background-image: url("/static/back/wall3.jpg");
+            background-color: grey;
+            font-family: sans-serif;
+            background-size: 1920px 1440px;
+            font-weight: bold;
+
+        }
+
+        .container {
+            font-family: serif;
+            width: 385px;
+            height: 415px;
+            margin: 7% auto;
+            border-radius: 25px;
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 17px #fff;
+        }
+
+        .header h1 {
+            color: #fff;
+            font-size: 45px;
+            margin-bottom: 80px;
+        }
+
+        .main1 input, button {
+            width: 270px;
+            height: 45px;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            padding-left: 38px;
+            box-sizing: border-box;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .main1 button {
+            padding-left: 0;
+            border-radius: 25px;
+            background-color: rgba(0, 0, 0, 0.8);
+            letter-spacing: 1px;
+            font-weight: bold;
+            margin-bottom: 70px;
+        }
+
+        .main1 button:hover {
+            box-shadow: 2px 2px 5px #fff;
+            border-radius: 25px;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .main1 input:hover {
+            color: white;
+            box-shadow: 2px 2px 5px #fff;
+            border-radius: 25px;
+            background-color: rgba(0, 0, 0, 0.35);
+        }
+
+        .main1 span {
+            position: relative;
+            color: white;
+
+        }
+
+        .main1 i {
+            position: absolute;
+            left: 15px;
+            color: #fff;
+            font-size: 16px;
+            top: 2px;
+        }
+    </style>
+
     {% if carrinho.__len__() == 0 %}
     <h3>O seu carrinho de compras está vazio.</h3>
     <img src="/static/images/carrinho.ico">
@@ -18,7 +97,7 @@
             <td>
                 {% set folha = livro[carrinho[linha].folha] %}
                 {% set li = carrinho[linha].linha %}
-                <img src='/static/{{ folha.title }}/{{ folha.cell(row = li, column = 1).value }}.jpg'>
+                <img src='/static/{{ folha.title }}/{{ folha.cell(row = li, column = 1).value }}.png'>
                 {% for co in range(1, folha.max_column) %}<br>
                 {{ folha.cell(row = 1, column = co).value }}:
                 {{ folha.cell(row = li, column = co).value }}
@@ -30,7 +109,9 @@
                 </form>
             </td>
             <!-- Se a linha já tiver o número máximo de items permitido, mudar... -->
-            {% if linha % items == items - 1 %}</tr><tr>{% endif %}
+            {% if linha % items == items - 1 %}
+        </tr>
+        <tr>{% endif %}
             {% endfor %}
         </tr>
     </table>
@@ -39,16 +120,17 @@
     <p></p>
     {% if usr and loja.encomendar %}
     <form method="post">
-        <fieldset>
-            <h1>Dados de faturação</h1>
-            <label>Número de identificação fiscal</label>
+        <div class="container">
+            <Br>
+            <h1 class="col1">Dados de faturação</h1>
+            <label class="col3">Número de identificação fiscal</label>
             <input type="text" name="nif" value="{{ loja.usr.nif }}" required>
-            <p></p><label>Nome completo</label>
-            <input type="text" name="nome" value="{{ loja.usr.nome }} "required>
-            <p></p><label>Morada de envio</label>
+            <p></p><label class="col3">Nome completo</label>
+            <input type="text" name="nome" value="{{ loja.usr.nome }} " required>
+            <p></p><label class="col3">Morada de envio</label>
             <textarea rows="4" cols="34" name="morada" required>{{ loja.usr.morada }}</textarea>
-            <p><br></p><input type='submit' value='Finalizar a Encomenda'>
-        </fieldset>
+            <p></p><input type='submit' value='Finalizar a Encomenda'>
+        </div>
     </form>
     {% elif usr %}
     <form action="/encomendar">
